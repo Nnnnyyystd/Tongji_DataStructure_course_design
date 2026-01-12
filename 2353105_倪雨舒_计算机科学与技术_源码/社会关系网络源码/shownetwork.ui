@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShowNetwork</class>
+ <widget class="QWidget" name="ShowNetwork">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1185</width>
+    <height>718</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="back_Button">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>460</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>返回上页</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exit_Button">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>460</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>退出程序</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_new_member_Button">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>390</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>添加新成员</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="check_group_Button">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>390</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>查看已有群组</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>15</width>
+     <height>15</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="graphicsView">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>10</y>
+     <width>821</width>
+     <height>691</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGraphicsView {
+    background-color: #f9fcff;        /* 浅蓝背景 */
+    border: 1px solid #90caa1;        /* 与按钮一致的边框色 */
+    border-radius: 6px;
+}
+
+/* 悬停时边框与底色轻微加深，保持层次感 */
+QGraphicsView:hover {
+    border-color: #64b5f6;
+    background-color: #eef7ff;
+}
+
+/* 禁用态 */
+QGraphicsView:disabled {
+    background-color: #f0f3f6;
+    border-color: #d0d7de;
+}
+
+/* 让内容区域透明，背景色由 QGraphicsView 控制 */
+QGraphicsView::viewport {
+    background: transparent;
+}</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="infoBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>311</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>-1</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 美化 QTextBrowser，全局生效 */
+#infoBox  {
+    background-color: #f9fcff;          /* 浅蓝背景，柔和不刺眼 */
+    border: 1px solid #90caa1;          /* 与按钮保持一致的绿色边框 */
+    border-radius: 6px;                 /* 圆角 */
+    padding: 8px;                       /* 内边距 */
+    color: #1f2328;                     /* 深色文字 */
+    font: 15px &quot;Microsoft YaHei&quot;;       /* 字体 */
+}
+
+/* 鼠标悬停时（虽然 QTextBrowser 一般不点击，但也能给 hover 效果） */
+#infoBox :hover {
+    border: 1px solid #64b5f6;          /* 边框加深 */
+    background-color: #eef7ff;          /* 稍微更亮的蓝色背景 */
+}
+
+/* 禁用时 */
+#infoBox :disabled {
+    background-color: #f0f3f6;
+    border: 1px solid #d0d7de;
+    color: #98a2ad;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>520</y>
+     <width>311</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 美化 QTextBrowser，全局生效 */
+#textBrowser {
+    background-color: #f9fcff;          /* 浅蓝背景，柔和不刺眼 */
+    border: 1px solid #90caa1;          /* 与按钮保持一致的绿色边框 */
+    border-radius: 6px;                 /* 圆角 */
+    padding: 8px;                       /* 内边距 */
+    color: #1f2328;                     /* 深色文字 */
+    font: 12px &quot;Microsoft YaHei&quot;;       /* 字体 */
+}
+
+/* 鼠标悬停时（虽然 QTextBrowser 一般不点击，但也能给 hover 效果） */
+#textBrowser:hover {
+    border: 1px solid #64b5f6;          /* 边框加深 */
+    background-color: #eef7ff;          /* 稍微更亮的蓝色背景 */
+}
+
+/* 禁用时 */
+#textBrowser:disabled {
+    background-color: #f0f3f6;
+    border: 1px solid #d0d7de;
+    color: #98a2ad;
+}
+</string>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Microsoft YaHei'; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Microsoft YaHei UI'; font-size:12pt; font-weight:700;&quot;&gt;红色代表当前节点，黄色当前人物的朋友，绿色代表当前人物可能认识的人，蓝色代表陌生人。节点可以拖动，双击节点可以对节点信息进行编辑，点击添加新成员按钮添加新成员。点击查看已有群组查看当前所有群组的详细信息。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FuncShow</class>
+ <widget class="QWidget" name="FuncShow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1001</width>
+    <height>689</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="return_lastpageButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>370</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>返回上页</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exitButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>410</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>退出程序</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="preclue_Button">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>先序线索化</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="midclue_Button">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>210</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>中序线索化</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="preorder_search">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>先序遍历</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="midorder_search">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>中序遍历</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="count_Button">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>统计节点个数</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="lastorder_search">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>后序遍历</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="lastclue_Button">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>250</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>后序线索化</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="midclue_search">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>330</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>中序线索化遍历</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="preclue_search">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>290</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>先序线索化遍历</string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="view">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>10</y>
+     <width>851</width>
+     <height>661</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGraphicsView {
+    background-color: #f9fcff;        /* 浅蓝背景 */
+    border: 1px solid #90caa1;        /* 与按钮一致的边框色 */
+    border-radius: 6px;
+}
+
+/* 悬停时边框与底色轻微加深，保持层次感 */
+QGraphicsView:hover {
+    border-color: #64b5f6;
+    background-color: #eef7ff;
+}
+
+/* 禁用态 */
+QGraphicsView:disabled {
+    background-color: #f0f3f6;
+    border-color: #d0d7de;
+}
+
+/* 让内容区域透明，背景色由 QGraphicsView 控制 */
+QGraphicsView::viewport {
+    background: transparent;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="outputBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>480</y>
+     <width>111</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 美化 QTextBrowser，全局生效 */
+QTextBrowser {
+    background-color: #f9fcff;          /* 浅蓝背景，柔和不刺眼 */
+    border: 1px solid #90caa1;          /* 与按钮保持一致的绿色边框 */
+    border-radius: 6px;                 /* 圆角 */
+    padding: 8px;                       /* 内边距 */
+    color: #1f2328;                     /* 深色文字 */
+    font: 12px &quot;Microsoft YaHei&quot;;       /* 字体 */
+}
+
+/* 鼠标悬停时（虽然 QTextBrowser 一般不点击，但也能给 hover 效果） */
+QTextBrowser:hover {
+    border: 1px solid #64b5f6;          /* 边框加深 */
+    background-color: #eef7ff;          /* 稍微更亮的蓝色背景 */
+}
+
+/* 禁用时 */
+QTextBrowser:disabled {
+    background-color: #f0f3f6;
+    border: 1px solid #d0d7de;
+    color: #98a2ad;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>450</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>输出结果如下所示：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>10</y>
+     <width>221</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>注：在线索化中，蓝色箭头为后继，</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>30</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>橙色箭头为前驱</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

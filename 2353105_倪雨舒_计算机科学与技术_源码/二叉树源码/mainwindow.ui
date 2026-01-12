@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>411</width>
+    <height>470</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="startButton">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>90</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>创建二叉树</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exitButton">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>90</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#startButton {
+    background-color: #ecf5ff;       /* 浅蓝背景 */
+    color: black;                    /* 黑色文字 */
+    border: 2px solid #90caf9;       /* 浅蓝边框 */
+    border-radius: 8px;              /* 圆角 */
+    padding: 8px 16px;               /* 内边距 */
+    font: 16px &quot;Microsoft YaHei&quot;;    /* 字体 */
+}
+
+/* 鼠标悬停 */
+QPushButton#startButton:hover {
+    background-color: #bbdefb;       /* 蓝色稍加深 */
+    border: 2px solid #64b5f6;       /* 边框颜色加深 */
+}
+
+/* 鼠标按下 */
+QPushButton#startButton:pressed {
+    background-color: #64b5f6;       /* 深蓝背景 */
+    border: 2px solid #1e88e5;       /* 更深的边框 */
+    color: white;                    /* 文字变成白色更明显 */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>退出程序</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>150</y>
+      <width>271</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="pic.qrc">:/new/prefix1/OIP.png</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>411</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="pic.qrc"/>
+ </resources>
+ <connections/>
+</ui>

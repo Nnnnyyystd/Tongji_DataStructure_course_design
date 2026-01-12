@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>488</width>
+    <height>428</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="show_Button">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>170</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* 美化 QTextBrowser，全局生效 */
+QTextBrowser {
+    background-color: #f9fcff;          /* 浅蓝背景，柔和不刺眼 */
+    border: 1px solid #90caa1;          /* 与按钮保持一致的绿色边框 */
+    border-radius: 6px;                 /* 圆角 */
+    padding: 8px;                       /* 内边距 */
+    color: #1f2328;                     /* 深色文字 */
+    font: 12px &quot;Microsoft YaHei&quot;;       /* 字体 */
+}
+
+/* 鼠标悬停时（虽然 QTextBrowser 一般不点击，但也能给 hover 效果） */
+QTextBrowser:hover {
+    border: 1px solid #64b5f6;          /* 边框加深 */
+    background-color: #eef7ff;          /* 稍微更亮的蓝色背景 */
+}
+
+/* 禁用时 */
+QTextBrowser:disabled {
+    background-color: #f0f3f6;
+    border: 1px solid #d0d7de;
+    color: #98a2ad;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>进入演示</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exit_Button">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>170</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>退出程序</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>488</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
